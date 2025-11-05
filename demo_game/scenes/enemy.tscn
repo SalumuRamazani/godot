@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmv0v8qh0xqbm"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_enemy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(40, 40)
+
+[node name="Enemy" type="Area2D" groups=["enemies"]]
+script = ExtResource("1_enemy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Sprite" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(1, 0.2, 0.2, 1)
+
+[node name="Eye1" type="ColorRect" parent="."]
+offset_left = -12.0
+offset_top = -10.0
+offset_right = -4.0
+offset_bottom = -2.0
+color = Color(1, 1, 1, 1)
+
+[node name="Eye2" type="ColorRect" parent="."]
+offset_left = 4.0
+offset_top = -10.0
+offset_right = 12.0
+offset_bottom = -2.0
+color = Color(1, 1, 1, 1)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]
