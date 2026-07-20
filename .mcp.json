@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "dataforseo": {
+      "command": "npx",
+      "args": ["-y", "dataforseo-mcp-server@2.9.11"],
+      "env": {
+        "DATAFORSEO_USERNAME": "${DATAFORSEO_USERNAME}",
+        "DATAFORSEO_PASSWORD": "${DATAFORSEO_PASSWORD}",
+        "ENABLED_MODULES": "SERP,KEYWORDS_DATA,DATAFORSEO_LABS"
+      }
+    }
+  }
+}
