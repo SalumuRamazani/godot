@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windward Meadow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+
+    <div id="vignette"></div>
+    <div id="grain"></div>
+
+    <div id="title-screen" class="screen">
+      <p class="eyebrow">late afternoon in the valley</p>
+      <h1>Windward Meadow</h1>
+      <p class="tag">
+        A painterly little walk. Gather twelve forest spirits before the light
+        slips behind the hills.
+      </p>
+      <button id="start-btn" type="button">Begin</button>
+      <p class="controls">
+        WASD to walk &nbsp;·&nbsp; Shift to run &nbsp;·&nbsp; Mouse to look
+        &nbsp;·&nbsp; Space to hop
+      </p>
+    </div>
+
+    <div id="hud" class="hud hidden">
+      <div class="spirit-badge">
+        <span id="spirit-count">0</span>
+        <span class="spirit-label">/ 12 spirits</span>
+      </div>
+      <p id="hint" class="hint">Click the valley to look around</p>
+    </div>
+
+    <div id="win-screen" class="screen hidden">
+      <p class="eyebrow">the meadow remembers you</p>
+      <h1>All the spirits came home</h1>
+      <p class="tag">
+        The great tree keeps their light now. Walk a little longer, if you like
+        — dusk is in no hurry.
+      </p>
+      <button id="again-btn" type="button">Wander once more</button>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
